@@ -265,7 +265,7 @@
     return async.series([
       function(cb) {
         return $.ajax({
-          url: `/data/${id}_biz.json`
+          url: `data/${id}_biz.json`
         }).done(function(data) {
           return cb(null,
       data);
@@ -276,7 +276,7 @@
       },
       function(cb) {
         return $.ajax({
-          url: `/data/${id}_path.json`
+          url: `data/${id}_path.json`
         }).done(function(data) {
           return cb(null,
       data);
@@ -287,7 +287,7 @@
       },
       function(cb) {
         return $.ajax({
-          url: `/data/${id}_raw.json`
+          url: `data/${id}_raw.json`
         }).done(function(data) {
           return cb(null,
       data);

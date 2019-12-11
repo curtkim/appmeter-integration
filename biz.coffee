@@ -202,9 +202,9 @@ $(document).ready ()->
 
 load = (id)->
   async.series [
-    (cb)-> $.ajax({url: "/data/#{id}_biz.json"}).done(( data )-> cb null, data).fail( ()-> cb null, null)
-    (cb)-> $.ajax({url: "/data/#{id}_path.json"}).done(( data )-> cb null, data).fail( ()-> cb null, null)
-    (cb)-> $.ajax({url: "/data/#{id}_raw.json"}).done(( data )-> cb null, data).fail( ()-> cb null, null)
+    (cb)-> $.ajax({url: "data/#{id}_biz.json"}).done(( data )-> cb null, data).fail( ()-> cb null, null)
+    (cb)-> $.ajax({url: "data/#{id}_path.json"}).done(( data )-> cb null, data).fail( ()-> cb null, null)
+    (cb)-> $.ajax({url: "data/#{id}_raw.json"}).done(( data )-> cb null, data).fail( ()-> cb null, null)
   ], (err, results)->
     biz = results[0]
     path = results[1]
